@@ -6,6 +6,7 @@ export class WebModule {
 
 	constructor() {
 		this.app = express();
-		this.app.use('/', express.static(path.join(__dirname, 'assets/')));
+		this.app.get('/', (req, res) => res.redirect('/1.html'));
+		this.app.use('/', express.static(path.join(__dirname, 'public')));
 	}
 }

@@ -4,21 +4,40 @@
 	"sourceRoot": "packages/tracker/src",
 	"projectType": "library",
 	"targets": {
-		"build": {
+		"serve": {
+			"executor": "@nrwl/webpack:webpack",
+			"outputs": [
+				"{options.outputPath}"
+			],
+			"options": {
+				"target": "node",
+				"compiler": "tsc",
+				"outputPath": "dist/packages/tracker",
+				"main": "packages/tracker/src/index.ts",
+				"tsConfig": "packages/tracker/tsconfig.lib.json",
+				"assets": [],
+				"isolatedConfig": true,
+				"webpackConfig": "packages/tracker/webpack.config.js",
+				"watch": true
+			},
+			"configurations": {
+				"development": {
+					"optimization": false,
+					"extractLicenses": false,
+					"inspect": false
+				}
+			}
+		},
+		"tsc:build": {
 			"executor": "@nrwl/js:tsc",
-			"outputs": ["{options.outputPath}"],
+			"outputs": [
+				"{options.outputPath}"
+			],
 			"options": {
 				"outputPath": "dist/packages/tracker",
 				"main": "packages/tracker/src/index.ts",
 				"tsConfig": "packages/tracker/tsconfig.lib.json",
-				"assets": ["packages/tracker/*.md"]
-			}
-		},
-		"lint": {
-			"executor": "@nrwl/linter:eslint",
-			"outputs": ["{options.outputFile}"],
-			"options": {
-				"lintFilePatterns": ["packages/tracker/**/*.ts"]
+				"assets": []
 			}
 		}
 	},

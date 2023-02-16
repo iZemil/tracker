@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"dev:back": "nx serve back",
-		"dev:tracker": "nx build tracker --watch"
+		"dev:tracker": "nx serve tracker"
 	},
 	"private": true,
 	"dependencies": {

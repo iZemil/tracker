@@ -15,7 +15,7 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"@tracker/tracker": ["packages/tracker/src/index.ts"]
+			"@tracker/types": ["packages/tracker/src/types.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]

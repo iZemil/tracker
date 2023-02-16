@@ -1,6 +1,4 @@
-interface Tracker {
-	track(event: string, ...tags: string[]): void;
-}
+import { Tracker } from './types';
 
 (function () {
 	const tracker: Tracker = {
@@ -8,6 +6,6 @@ interface Tracker {
 			console.log(event, ...tags);
 		},
 	};
-
+	window.exports = {};
 	window.tracker = tracker;
 })();

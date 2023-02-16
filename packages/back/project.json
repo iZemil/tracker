@@ -16,7 +16,7 @@
                 "main": "packages/back/src/main.ts",
                 "tsConfig": "packages/back/tsconfig.app.json",
                 "assets": [
-                    "packages/back/src/assets"
+                    "packages/back/src/public"
                 ],
                 "isolatedConfig": true,
                 "webpackConfig": "packages/back/webpack.config.js"
@@ -38,17 +38,6 @@
                 "development": {
                     "buildTarget": "back:build:development"
                 }
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "outputs": [
-                "{options.outputFile}"
-            ],
-            "options": {
-                "lintFilePatterns": [
-                    "packages/back/**/*.ts"
-                ]
             }
         }
     },
