@@ -6,9 +6,11 @@ export class RootModule {
 
 	constructor() {
 		this.app = express();
-		this.app.use('/assets', express.static(path.join(__dirname, 'assets')));
-		this.app.get('/api', (req, res) => {
-			res.send({ message: 'Welcome to back!' });
+
+		this.app.get('/tracker', (req, res) => {
+			res.sendFile('index.js', {
+				root: path.join(__dirname, '../tracker/src'),
+			});
 		});
 	}
 }
