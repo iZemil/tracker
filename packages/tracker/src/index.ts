@@ -1,11 +1,6 @@
-import { Tracker } from './types';
+import { tracker } from './tracker';
 
 (function () {
-	const tracker: Tracker = {
-		track(event: string, ...tags: string[]) {
-			console.log(event, ...tags);
-		},
-	};
 	window.exports = {};
-	window.tracker = tracker;
+	window.tracker = tracker();
 })();
