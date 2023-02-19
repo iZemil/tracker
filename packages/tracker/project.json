@@ -14,7 +14,7 @@
 				"compiler": "tsc",
 				"outputPath": "dist/packages/tracker",
 				"main": "packages/tracker/src/index.ts",
-				"tsConfig": "packages/tracker/tsconfig.lib.json",
+				"tsConfig": "packages/tracker/tsconfig.json",
 				"assets": [],
 				"isolatedConfig": true,
 				"webpackConfig": "packages/tracker/webpack.config.js",

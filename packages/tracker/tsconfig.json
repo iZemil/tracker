@@ -1,6 +1,8 @@
 {
 	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
+		"outDir": "../../dist/out-tsc",
+		"declaration": true,
 		"module": "CommonJS",
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
@@ -11,10 +13,5 @@
 		"importHelpers": false
 	},
 	"files": [],
-	"include": [],
-	"references": [
-		{
-			"path": "./tsconfig.lib.json"
-		}
-	]
+	"include": ["src/**/*.ts"]
 }

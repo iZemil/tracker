@@ -1,6 +1,6 @@
-import { tracker } from './tracker';
+import { Tracker } from './tracker';
 
 (function () {
 	window.exports = {};
-	window.tracker = tracker();
+	window.tracker = new Tracker();
 })();

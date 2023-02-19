@@ -1,6 +1,6 @@
 declare global {
 	interface Window {
-		tracker: ITracker;
+		tracker: Tracker;
 	}
 }
 

@@ -1,10 +1,10 @@
-import { IPayload } from '../types';
+import { ITrack } from './types';
 
-const API_URL = 'http://localhost:8888';
+const apiUrl = (path = '/') => `http://localhost:8888${path}`;
 
 export const api = {
-	sendTrack: async (body: IPayload[], path = '/track') =>
-		fetch(`${API_URL}${path}`, {
+	sendTrack: async (body: ITrack[]) =>
+		fetch(apiUrl('/track'), {
 			method: 'POST',
 			mode: 'cors',
 			headers: {
