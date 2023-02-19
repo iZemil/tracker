@@ -14,9 +14,7 @@
 		"skipLibCheck": true,
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
-		"paths": {
-			"@tracker/types": ["packages/tracker/src/types.ts"]
-		}
+		"strictPropertyInitialization": false
 	},
 	"exclude": ["node_modules", "tmp"]
 }
