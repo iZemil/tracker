@@ -6,7 +6,7 @@
 
 1. install mongodb and run it
 2. install node dependencies `npm ci`
-3. set up [default env variables](./env)
+3. set up [default env variables](./.env)
 4. run development services:
     - develop [back app](./packages/back/src/main.ts) `npm run dev:back`
     - develop [tracker lib](./packages/tracker/src/tracker.ts) `npm run dev:tracker`
