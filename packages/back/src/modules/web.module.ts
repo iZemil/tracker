@@ -1,11 +1,11 @@
-import express, { Express } from 'express';
+import express from 'express';
 import * as path from 'path';
 
+/**
+ * Module to serve html static files
+ */
 export class WebModule {
-	public readonly app: Express;
-
-	constructor() {
-		this.app = express();
+	constructor(public readonly app = express()) {
 		this.app.get('/', (req, res) => res.redirect('/1.html'));
 		this.app.use('/', express.static(path.join(__dirname, 'public')));
 	}

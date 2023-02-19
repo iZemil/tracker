@@ -1,14 +1,13 @@
-import { RootModule } from './modules/root.module';
+import { AppModule } from './modules/app.module';
 import { WebModule } from './modules/web.module';
+import { CONFIG } from './config';
 
 async function bootstrap() {
-	const backPort = 8888;
-	const { app: backApp } = new RootModule();
-	backApp.listen(backPort, () => console.log(`Back is running on: http://localhost:${backPort}`));
-
-	const publicPort = 5000;
+	const { app, web } = CONFIG;
+	const { app: appModule } = new AppModule();
 	const { app: webApp } = new WebModule();
-	webApp.listen(5000, () => console.log(`Web is running on: http://localhost:${publicPort}`));
-}
 
+	appModule.listen(app.port, () => console.log(`Back is running on: http://localhost:${app.port}`));
+	webApp.listen(web.port, () => console.log(`Web is running on: http://localhost:${web.port}`));
+}
 bootstrap();

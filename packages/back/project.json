@@ -14,7 +14,7 @@
                 "compiler": "tsc",
                 "outputPath": "dist/packages/back",
                 "main": "packages/back/src/main.ts",
-                "tsConfig": "packages/back/tsconfig.app.json",
+                "tsConfig": "packages/back/tsconfig.json",
                 "assets": [
                     "packages/back/src/public"
                 ],
